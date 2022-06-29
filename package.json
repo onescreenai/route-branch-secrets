@@ -1,0 +1,12 @@
+{
+  "name": "route-branch-secrets",
+  "version": "1.0.0",
+  "description": "Routes secrets based on branch",
+  "main": "src/index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "@actions/github": "^5.0.3"
+  }
+}

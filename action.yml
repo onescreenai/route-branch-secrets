@@ -1,0 +1,12 @@
+name: "Route branch secrets"
+description: "Routes secrets based on branch"
+author: "Robert Ozimek"
+
+inputs:
+  secrets:
+    description: "Collection of secrets (comma separated)"
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'src/index.js'
