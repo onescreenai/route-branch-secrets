@@ -2,16 +2,16 @@ import core from '@actions/core';
 import github from '@actions/github';
 
 try {
-    const variables = core.getInput('variables', { required: false })
-        .toUpperCase()
-        .split(',')
-        .map(value => value.trim());
+    const variables = core?.getInput('variables', { required: false })
+        ?.toUpperCase()
+        ?.split(',')
+        ?.map(value => value?.trim?.()) ?? [];
 
     const secrets = core
-        .getInput('secrets', { required: false })
-        .toUpperCase()
-        .split(',')
-        .map(value => value.trim());
+        ?.getInput('secrets', { required: false })
+        ?.toUpperCase()
+        ?.split(',')
+        ?.map(value => value?.trim?.()) ?? [];
 
     if (github.context.eventName === 'pull_request') {
         throw new Error('Pull requests not supported');
